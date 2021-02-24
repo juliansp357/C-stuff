@@ -5,16 +5,29 @@ using namespace std;
 
 
 
-int sum = 0;
+int sum = 0; //global integer
 
-void fun(int num) {
+/* We're expectating a int number
+and if the number = 0, we print "sum", 
+otherwise we introduce a number and the 
+programm will sum it and it will decrease 
+until we got zero
+*/
+
+
+/* there's no point to return anything since
+we have a global integer, we make the return
+parameter a void
+*/
+
+void fun(int num) {  
     if (num == 0) {
-        cout << sum << endl; 
+        cout << sum << endl; // if num = 0, it will print the sum, that is zero because of aritmetic progression
     }
 
     else {
-        sum += num;
-        num--;
+        sum += num; //this will sum a number and the next one
+        num--; // that'll substract one from num every single time we execute if statement 
         fun(num);
     }
     
